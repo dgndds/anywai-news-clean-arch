@@ -1,5 +1,5 @@
 import { NewsArticle } from "core";
 
 export abstract class RemoteStorageService {
-    abstract get(): NewsArticle[];
+    abstract get(): Promise<NewsArticle[]>;
 }
