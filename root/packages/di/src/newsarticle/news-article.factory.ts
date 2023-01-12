@@ -13,4 +13,8 @@ export class NewsArticleFactory {
     getGetAllNewsArticlesUsecase(): core.GetAllNewsArticlesUsecase {
         return new core.GetAllNewsArticlesUsecaseImpl(this.newsArticleRepository);
     }
+
+    getSearchNewsArticlesUsecase(): core.SearchNewsArticlesUsecase {
+        return new core.SearchNewsArticlesUsecaseImpl(this.newsArticleRepository);
+    }
 }

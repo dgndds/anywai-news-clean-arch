@@ -8,4 +8,8 @@ export class NewsArticleRepositoryImpl implements core.NewsArticleRepository {
     getAllNewsArticles(): Promise<core.NewsArticle[]> {
         return this.remoteStorageService.get();
     }
+
+    searchNewsArticles(search: string): Promise<core.NewsArticle[]> {
+        return this.remoteStorageService.getSearchResult(search);
+    }
 }
